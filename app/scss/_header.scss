@@ -1,0 +1,40 @@
+.header {
+  height: 100vh;
+  background: url("../img/Logo.png") 50% 30px no-repeat,
+              url("../img/TopLayer.png") 50% 50% no-repeat;
+  background-size: auto, cover;
+
+  &__menu {
+    padding-top: 60px;
+  }
+
+  &__href {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: $text-color;
+    cursor: pointer;
+
+    &--work {
+      margin: 0 90px 0 70px;
+
+      &::before {
+        position: relative;
+        left: -35px;
+        content: ".";
+        cursor: default;
+      }
+    }
+
+    &--shop {
+      margin: 0 70px 0 90px;
+
+      &::after {
+        position: relative;
+        right: -35px;
+        content: ".";
+        cursor: default;
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+.shop {
+  &__catalog {
+    display: flex;
+  }
+
+  &__cont-1 {
+    display: flex;
+    flex-grow: 3;
+    flex-basis: 0;
+  }
+
+  &__sub-cont-1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 2;
+    flex-basis: 0;
+  }
+
+  &__cont-2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 2;
+    flex-basis: 0;
+  }
+
+  &__box {
+    padding-bottom: $height-catalog-box-wide;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &--1 {
+      width: 50%;
+      background-image: url("../img/SlideSection/slide1.png");
+    }
+    
+    &--2 {
+      width: 50%;
+      background-image: url("../img/SlideSection/slide2.png");
+    }
+    
+    &--3 {
+      width: 100%;
+      background-image: url("../img/SlideSection/slide3.png");
+    }
+    
+    &--4 {
+      flex-grow: 1;
+      flex-basis: 0;
+      padding-top: $height-catalog-box-wide;
+      background-image: url("../img/SlideSection/slide4.png");
+    }
+    
+    &--5 {
+      flex-grow: 1;
+      flex-basis: 0;
+      padding-top: $height-catalog-box-wide;
+      background-image: url("../img/SlideSection/slide5.png");
+    }
+    
+    &--6 {
+      width: 100%;
+      background-image: url("../img/SlideSection/slide6.png");
+    }
+    
+    &--7 {
+      width: 50%;
+      background-image: url("../img/SlideSection/slide7.png");
+    }
+    
+    &--8 {
+      width: 50%;
+      background-image: url("../img/SlideSection/slide8.png");
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    &__catalog {
+      flex-wrap: wrap;
+    }
+
+    &__cont-2 {
+      width: 100%;
+      flex-wrap: nowrap;
+      /* ?
+      flex-grow: 0;
+      flex-basis: auto; */
+    }
+
+    &__box {
+      padding-bottom: $height-catalog-box-medi;
+
+      &--4 {
+        padding-top: $height-catalog-box-medi;
+      }
+
+      &--5 {
+        padding-top: $height-catalog-box-medi;
+      }
+
+      &--6 {
+        width: 50%;
+      }
+
+      &--7 {
+        width: 25%;
+      }
+
+      &--8 {
+        width: 25%;
+      }
+    }
+  }
+}

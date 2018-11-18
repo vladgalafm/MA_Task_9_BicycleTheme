@@ -1,0 +1,20 @@
+/* BREAKPOINTS: 1200px, 992px and 768px*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', 'Arial', sans-serif;
+  text-decoration: none;
+  text-align: center;
+}
+
+@import "variables";
+@import "mixins";
+
+@import "header";
+@import "about";
+@import "bi-details";
+@import "comments";
+@import "shop";

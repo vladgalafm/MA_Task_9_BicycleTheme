@@ -1,0 +1,133 @@
+.bi-details {
+  &__part {
+    display: flex;
+  }
+
+  &__company {
+    flex-basis: 0;
+    padding-top: $height-bi-details-part;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: auto, cover;
+
+    &--bicycle-company {
+      flex-grow: 2;
+      background-image: url("../img/BlockSection/Logo1.png"),
+                        url("../img/BlockSection/Layer10.png");
+    }
+
+    &--vintage {
+      flex-grow: 2;
+      background-image: url("../img/BlockSection/Logo2.png"),
+                        url("../img/BlockSection/Layer12.png");
+    }
+
+    &--bicycles {
+      flex-grow: 1;
+      background-image: url("../img/BlockSection/Logo3.png"),
+                        url("../img/BlockSection/Layer15.png");
+    }
+  }
+
+  &__description {
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 500px;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+    height: $height-bi-details-part - $height-picture-under-text;
+    padding: 56px 10% 48px;
+    background-color: $white;
+    transition-duration: 1s;
+
+    &::after {
+      position: relative;
+      content: "";
+      top: 15px;
+      right: -45%;
+      display: block;
+      height: 1px;
+      width: 10%;
+      background-color: #d7d7d7;
+    }
+
+    &:hover {
+      height: $height-bi-details-part;
+
+      & .bi-details__text {
+        max-height: $height-bi-details-part - 104px;
+      }
+    }
+  }
+
+  &__text {
+    padding-top: 60px;
+    max-height: $height-bi-details-part - $height-picture-under-text - 104px;
+    overflow: hidden;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    transition-duration: 1s;
+    
+    &--frame {
+      background-image: url("../img/BlockSection/Icon2.png");
+    }
+
+    &--sprocket {
+      background-image: url("../img/BlockSection/Icon3.png");
+    }
+
+    &--fork {
+      background-image: url("../img/BlockSection/Icon4.png");
+    }
+  }
+
+  &__header {
+    padding-bottom: 1.125rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    word-spacing: 0.2rem;
+  }
+
+  &__content {
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    word-spacing: 0.15rem;
+    color: $text-color-lighter;
+    text-align: justify;
+  }
+
+  &__picture {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: $height-picture-under-text;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &--vintage {
+      background-image: url("../img/BlockSection/Layer11.png");
+    }
+
+    &--boriosa {
+      background-image: url("../img/BlockSection/Layer13.png");
+    }
+
+    &--retro {
+      background-image: url("../img/BlockSection/Layer16.png");
+    }
+  }
+
+  &__additional {
+    flex-grow: 1;
+    flex-basis: 0;
+    background: url("../img/BlockSection/Layer14.png") 50% 50% no-repeat;
+    background-size: cover;
+  }
+}

@@ -1,0 +1,161 @@
+.comments {
+  position: relative;
+  padding: 12vh 15% 14vh;
+  background-color: $background-grey;
+  
+  &__container {
+    position: relative;
+    display: block;
+    padding-top: 50px;
+    background: url("../img/twitter-icon.png") 50% 0 no-repeat;
+  }
+
+  &__label {
+    display: block;
+    padding-bottom: 30px;
+    background-color: $background-grey;
+
+    &--first {
+      position: relative;
+      top: 0;
+      z-index: 1;
+    }
+
+    &--second {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+    }
+
+    &--third {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+    }
+  }
+
+  &__user {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+  }
+
+  &__time {
+    margin-left: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: $text-color-lighter;
+  }
+
+  &__text {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: italic;
+    color: $text-color-lighter;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 50px;
+    visibility: hidden;
+
+    &::after {
+      position: absolute;
+      content: "";
+      box-sizing: border-box;
+      width: 14px;
+      height: 14px;
+      border: 1px solid $text-color-lighter;
+      border-radius: 50%;
+      background-color: $background-grey;
+      transition: 0.2s;
+      cursor: pointer;
+      visibility: visible;
+    }
+
+    &--first {
+      &:checked ~ .comments__container .comments__label {
+        &--first {
+          position: relative;
+          top: 0;
+          z-index: 1;
+        }
+
+        &--second {
+          position: absolute;
+          top: 0;
+          z-index: -1;
+        }
+
+        &--third {
+          position: absolute;
+          top: 0;
+          z-index: -1;
+        }
+      }
+
+      &::after {
+        left: -27px;
+      }
+    }
+
+    &--second {
+      &:checked ~ .comments__container .comments__label {
+        &--first {
+          position: absolute;
+          top: 0;
+          z-index: -1;
+        }
+
+        &--second {
+          position: relative;
+          top: 0;
+          z-index: 1;
+        }
+
+        &--third {
+          position: absolute;
+          top: 0;
+          z-index: -1;
+        }
+      }
+
+      &::after {
+        left: -7px;
+      }
+    }
+
+    &--third {
+      &:checked ~ .comments__container .comments__label {
+        &--first {
+          position: absolute;
+          top: 0;
+          z-index: -1;
+        }
+
+        &--second {
+          position: absolute;
+          top: 0;
+          z-index: -1;
+        }
+
+        &--third {
+          position: relative;
+          top: 0;
+          z-index: 1;
+        }
+      }
+
+      &::after {
+        left: 13px;
+      }
+    }
+
+    &:checked::after {
+      background-color: $text-color-lighter;
+    }
+  }
+}

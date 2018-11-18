@@ -1,0 +1,24 @@
+.about {
+  padding: 12vh 15% 12.5vh;
+  background-color: $background-grey;
+
+  &__container {
+    padding-top: 70px;
+    background: url("../img/Icon.png") 50% 0 no-repeat;
+  }
+
+  &__header {
+    padding-bottom: 1.25rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    word-spacing: 0.2rem;
+  }
+
+  &__content {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    word-spacing: 0.15rem;
+    color: $text-color-lighter;
+  }
+}
