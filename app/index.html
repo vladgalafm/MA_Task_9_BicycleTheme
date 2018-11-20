@@ -108,16 +108,14 @@
 
   <div class="shop">
     <div class="shop__catalog">
-      <div class="shop__cont-1">
-        <div class="shop__sub-cont-1">
-          <div class="shop__box shop__box--1"></div>
-          <div class="shop__box shop__box--2"></div>
-          <div class="shop__box shop__box--3"></div>
-        </div>
-        <div class="shop__box shop__box--4"></div>
+      <div class="shop__container shop__container--1">
+        <div class="shop__box shop__box--1"></div>
+        <div class="shop__box shop__box--2"></div>
+        <div class="shop__box shop__box--3"></div>
       </div>
+      <div class="shop__box shop__box--4"></div>
       <div class="shop__box shop__box--5"></div>
-      <div class="shop__cont-2">
+      <div class="shop__container shop__container--2">
         <div class="shop__box shop__box--6"></div>
         <div class="shop__box shop__box--7"></div>
         <div class="shop__box shop__box--8"></div>
@@ -126,17 +124,41 @@
   </div>
 
   <div class="links">
-    <div class="shop__link-cont">
-      <a class="shop__href" href="#">VISIT US</a>
-    </div>
-    <div class="shop__link-cont">
-      <a class="shop__href" href="#">DISCOVER THE SHOP</a>
-    </div>
-    <div class="shop__link-cont">
-      <a class="shop__href" href="#">CONTACT US</a>
+    <div class="links__container">
+      <a class="links__href links__href--visit" href="#">VISIT US</a>
+      <a class="links__href links__href--discover" href="#">DISCOVER THE SHOP</a>
+      <a class="links__href links__href--contact" href="#">CONTACT US</a>
     </div>
   </div>
 
+  <div class="email">
+    <div class="email__container">
+      <form class="email__form" action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post">
+        <label class="email__label" for="email">Stay on the saddle!</label>
+        <input class="email__input" id="email" type="email" name="email" placeholder="enter your email..." required>
+        <input class="email__button" type="submit" value="GO">
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer__container">
+      <div class="footer__contacts">
+        <span class="footer__line footer__line--bold">AOD New York</span>
+        <span class="footer__line footer__line--italic">2250 Lexington Avenue</span>
+        <span class="footer__line footer__line--italic">New York, NY 10035 - info@domain.com</span>
+      </div>
+      <div class="footer__social">
+        <a class="footer__href footer__href--twitter" href="#"></a>
+        <a class="footer__href footer__href--facebook" href="#"></a>
+        <a class="footer__href footer__href--pinterest" href="#"></a>
+      </div>
+      <div class="footer__creator">
+        <span class="footer__line footer__line--italic">Handcrafted by</span>
+        <img class="footer__yebo-icon" src="img/YEBO-Logo.png" alt="YEBO-Logo">
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>

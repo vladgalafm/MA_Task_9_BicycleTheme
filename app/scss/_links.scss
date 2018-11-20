@@ -1,0 +1,54 @@
+.links {
+  padding: 2.5rem 15%;
+  background-color: $links-background;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__href {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.875rem 0;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    word-spacing: 0.2rem;
+    color: $link-color;
+    border: 1px solid $link-color;
+    transition-duration: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      color: $link-hover;
+      border-color: $link-hover;
+    }
+
+    &--visit,
+    &--contact {
+      width: 25%;
+    }
+
+    &--discover {
+      width: 35%;
+    }
+
+    @media screen and (min-width: 576px) and (max-width: 991px) {
+      &--visit,
+      &--contact {
+        width: 45%;
+      }
+
+      &--discover {
+        order: 1;
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 575px) {
+      width: 100%;
+    }
+  }
+}
