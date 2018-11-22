@@ -12,14 +12,14 @@
 
   <div class="header">
     <nav class="header__menu">
-      <a class="header__href" href="#">ABOUT US</a>
-      <a class="header__href header__href--work" href="#">WORK</a>
-      <a class="header__href header__href--shop" href="#">SHOP</a>
-      <a class="header__href" href="#">CONTACT</a>
+      <a class="header__href header__href--about" href="#about">ABOUT US</a>
+      <a class="header__href header__href--work" href="#bi-details">WORK</a>
+      <a class="header__href header__href--shop" href="#shop">SHOP</a>
+      <a class="header__href header__href--contact" href="#contact">CONTACT</a>
     </nav>
   </div>
 
-  <div class="about">
+  <div class="about" id="about">
     <div class="about__container">
       <h2 class="about__header">A NEW GENERATION OF VINTAGE BIKE</h2>
       <p class="about__content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
@@ -29,7 +29,7 @@
     </div>
   </div>
 
-  <div class="bi-details">
+  <div class="bi-details" id="bi-details">
     <div class="bi-details__part">
       <div class="bi-details__company bi-details__company--bicycle-company"></div>
       <div class="bi-details__description">
@@ -41,6 +41,7 @@
               and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
               electronic typesetting, remaining essentially unchanged.</p>
           </div>
+          <a class="bi-details__read-more" href="#">Read more ...</a>
         </div>
         <div class="bi-details__picture bi-details__picture--vintage"></div>
       </div>
@@ -56,6 +57,7 @@
               and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
               electronic typesetting, remaining essentially unchanged.</p>
           </div>
+          <a class="bi-details__read-more" href="#">Read more ...</a>
         </div>
         <div class="bi-details__picture bi-details__picture--boriosa"></div>
       </div>
@@ -73,6 +75,7 @@
               and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
               electronic typesetting, remaining essentially unchanged.</p>
           </div>
+          <a class="bi-details__read-more" href="#">Read more ...</a>
         </div>
         <div class="bi-details__picture bi-details__picture--retro"></div>
       </div>
@@ -86,39 +89,95 @@
     <input class="comments__button comments__button--third" id="third-com" type="radio" name="comment">
     <div class="comments__container">
       <label class="comments__label comments__label--first" for="first-com">
-        <label class="comments__user">AOD New York @aod </label>
-        <label class="comments__time">/ 35 min</label>
-        <label class="comments__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio
-          porttitor, dictum turpis vitae, pretium ante amet.</label>
+        <span class="comments__user">AOD New York @aod </span>
+        <span class="comments__time">/ 35 min</span>
+        <span class="comments__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio
+          porttitor, dictum turpis vitae, pretium ante amet.</span>
       </label>
       <label class="comments__label comments__label--second" for="second-com">
-        <label class="comments__user">AOD New York @aod </label>
-        <label class="comments__time">/ 43 min</label>
-        <label class="comments__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio
-          porttitor, dictum turpis vitae, pretium ante amet.</label>
+        <span class="comments__user">AOD New York @aod </span>
+        <span class="comments__time">/ 43 min</span>
+        <span class="comments__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio
+          porttitor, dictum turpis vitae, pretium ante amet.</span>
       </label>
       <label class="comments__label comments__label--third" for="third-com">
-        <label class="comments__user">AOD New York @aod </label>
-        <label class="comments__time">/ 56 min</label>
-        <label class="comments__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio
-          porttitor, dictum turpis vitae, pretium ante amet.</label>
+        <span class="comments__user">AOD New York @aod </span>
+        <span class="comments__time">/ 56 min</span>
+        <span class="comments__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio
+          porttitor, dictum turpis vitae, pretium ante amet.</span>
       </label>
     </div>
   </div>
 
-  <div class="shop">
+  <div class="shop" id="shop">
     <div class="shop__catalog">
       <div class="shop__container shop__container--1">
-        <div class="shop__box shop__box--1"></div>
-        <div class="shop__box shop__box--2"></div>
-        <div class="shop__box shop__box--3"></div>
+        <div class="shop__box shop__box--1">
+          <a class="shop__link" href="#">
+            <div class="shop__link-style">
+              <div class="shop__link-picture"></div>
+              <span class="shop__link-label">SHOP NOW</span>
+            </div>
+          </a>
+        </div>
+        <div class="shop__box shop__box--2">
+          <a class="shop__link" href="#">
+            <div class="shop__link-style">
+              <div class="shop__link-picture"></div>
+              <span class="shop__link-label">SHOP NOW</span>
+            </div>
+          </a>
+        </div>
+        <div class="shop__box shop__box--3">
+          <a class="shop__link" href="#">
+            <div class="shop__link-style">
+              <div class="shop__link-picture"></div>
+              <span class="shop__link-label">SHOP NOW</span>
+            </div>
+          </a>
+        </div>
       </div>
-      <div class="shop__box shop__box--4"></div>
-      <div class="shop__box shop__box--5"></div>
+      <div class="shop__box shop__box--4">
+        <a class="shop__link" href="#">
+          <div class="shop__link-style">
+            <div class="shop__link-picture"></div>
+            <span class="shop__link-label">SHOP NOW</span>
+          </div>
+        </a>
+      </div>
+      <div class="shop__box shop__box--5">
+        <a class="shop__link" href="#">
+          <div class="shop__link-style">
+            <div class="shop__link-picture"></div>
+            <span class="shop__link-label">SHOP NOW</span>
+          </div>
+        </a>
+      </div>
       <div class="shop__container shop__container--2">
-        <div class="shop__box shop__box--6"></div>
-        <div class="shop__box shop__box--7"></div>
-        <div class="shop__box shop__box--8"></div>
+        <div class="shop__box shop__box--6">
+          <a class="shop__link" href="#">
+            <div class="shop__link-style">
+              <div class="shop__link-picture"></div>
+              <span class="shop__link-label">SHOP NOW</span>
+            </div>
+          </a>
+        </div>
+        <div class="shop__box shop__box--7">
+          <a class="shop__link" href="#">
+            <div class="shop__link-style">
+              <div class="shop__link-picture"></div>
+              <span class="shop__link-label">SHOP NOW</span>
+            </div>
+          </a>
+        </div>
+        <div class="shop__box shop__box--8">
+          <a class="shop__link" href="#">
+            <div class="shop__link-style">
+              <div class="shop__link-picture"></div>
+              <span class="shop__link-label">SHOP NOW</span>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -131,7 +190,7 @@
     </div>
   </div>
 
-  <div class="email">
+  <div class="email" id="contact">
     <div class="email__container">
       <form class="email__form" action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post">
         <label class="email__label" for="email">Stay on the saddle!</label>

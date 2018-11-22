@@ -1,36 +1,33 @@
 .comments {
   position: relative;
-  padding: 12vh 15% 14vh;
+  padding: 6rem 15% 8rem;
   background-color: $background-grey;
   
   &__container {
     position: relative;
     display: block;
-    padding-top: 50px;
+    padding: 50px 0;
     background: url("../img/twitter-icon.png") 50% 0 no-repeat;
+    overflow: hidden;
   }
 
   &__label {
     display: block;
-    padding-bottom: 30px;
     background-color: $background-grey;
 
     &--first {
       position: relative;
       top: 0;
-      z-index: 1;
     }
 
     &--second {
       position: absolute;
-      top: 0;
-      z-index: -1;
+      top: 100%;
     }
 
     &--third {
       position: absolute;
-      top: 0;
-      z-index: -1;
+      top: 100%;
     }
   }
 
@@ -59,7 +56,7 @@
 
   &__button {
     position: absolute;
-    bottom: 50px;
+    bottom: 4rem;
     visibility: hidden;
 
     &::after {
@@ -81,19 +78,16 @@
         &--first {
           position: relative;
           top: 0;
-          z-index: 1;
         }
 
         &--second {
           position: absolute;
-          top: 0;
-          z-index: -1;
+          top: 100%;
         }
 
         &--third {
           position: absolute;
-          top: 0;
-          z-index: -1;
+          top: 100%;
         }
       }
 
@@ -106,20 +100,17 @@
       &:checked ~ .comments__container .comments__label {
         &--first {
           position: absolute;
-          top: 0;
-          z-index: -1;
+          top: 100%;
         }
 
         &--second {
           position: relative;
           top: 0;
-          z-index: 1;
         }
 
         &--third {
           position: absolute;
-          top: 0;
-          z-index: -1;
+          top: 100%;
         }
       }
 
@@ -132,20 +123,17 @@
       &:checked ~ .comments__container .comments__label {
         &--first {
           position: absolute;
-          top: 0;
-          z-index: -1;
+          top: 100%;
         }
 
         &--second {
           position: absolute;
-          top: 0;
-          z-index: -1;
+          top: 100%;
         }
 
         &--third {
           position: relative;
           top: 0;
-          z-index: 1;
         }
       }
 

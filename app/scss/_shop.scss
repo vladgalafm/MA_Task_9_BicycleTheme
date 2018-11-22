@@ -1,4 +1,6 @@
 .shop {
+  background-color: $links-background;
+
   &__catalog {
     display: flex;
   }
@@ -11,56 +13,94 @@
   }
 
   &__box {
+    position: relative;
     flex-grow: 1;
     padding-bottom: $height-catalog-box-lg;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     &--1 {
       flex-basis: 1%;
       background-image: url("../img/SlideSection/slide1.png");
     }
-    
+
     &--2 {
       flex-basis: 1%;
       background-image: url("../img/SlideSection/slide2.png");
     }
-    
+
     &--3 {
       flex-basis: 100%;
       background-image: url("../img/SlideSection/slide3.png");
     }
-    
+
     &--4 {
       flex-basis: 1%;
       padding-top: $height-catalog-box-lg;
       background-image: url("../img/SlideSection/slide4.png");
     }
-    
+
     &--5 {
       flex-basis: 1%;
       padding-top: $height-catalog-box-lg;
       background-image: url("../img/SlideSection/slide5.png");
     }
-    
+
     &--6 {
       flex-basis: 100%;
       background-image: url("../img/SlideSection/slide6.png");
     }
-    
+
     &--7 {
       flex-basis: 1%;
       background-image: url("../img/SlideSection/slide7.png");
     }
-    
+
     &--8 {
       flex-basis: 1%;
       background-image: url("../img/SlideSection/slide8.png");
     }
   }
 
-  @media screen and (min-width: 768px) and (max-width: 991px) {
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    opacity: 0;
+    background-color: $button-hover-background;
+    transition-duration: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__link-style {
+    margin: auto;
+    justify-content: center;
+  }
+
+  &__link-picture {
+    margin: auto;
+    width: 51px;
+    height: 30px;
+    background-image: url("../img/SlideSection/Shape13.png");
+  }
+
+  &__link-label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.15rem;
+    color: $white;
+  }
+
+  @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md - 1px) {
     &__catalog {
       flex-wrap: wrap;
     }
@@ -85,7 +125,7 @@
     }
   }
 
-  @media screen and (min-width: 576px) and (max-width: 767px) {
+  @media screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm - 1px) {
     &__catalog {
       flex-wrap: wrap;
     }
@@ -105,7 +145,7 @@
     }
   }
 
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: $breakpoint-xs - 1px) {
     &__catalog {
       flex-wrap: wrap;
     }

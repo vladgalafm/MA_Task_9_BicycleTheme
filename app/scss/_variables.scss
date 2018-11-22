@@ -1,19 +1,33 @@
+$breakpoint-lg: 1200px;
+$breakpoint-md: 992px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 576px;
+
+$main-theme-color: #64c29e;
+
 $text-color: #4d4959;
 $text-color-lighter: #848789;
 $background-grey: #f7f7f7;
 $white: #ffffff;
-
+/*
+$height-bi-details-part: 37.48828vw;
+$height-picture-under-text: 12.48439vw;
+*/
 $height-bi-details-part: 500px;
 $height-picture-under-text: 150px;
+$container-padding-top: 56px;
+$container-padding-bottom: 48px;
+$container-padding-bottom-hover: 88px;
 
 $height-catalog-box-lg: 100vw / 6;
 $height-catalog-box-md: 100vw / 4;
 $height-catalog-box-sm: 100vw / 3;
 $height-catalog-box-xs: 100vw / 2;
 
+$button-hover-background: rgba(100, 194, 158, 0.75);
+
 $links-background: #282f35;
-$link-color: #64c29e;
-$link-hover: #eeeeee;
+$button-hover: #eeeeee;
 
 $placeholder-color: #aaaaaa;
 

@@ -41,18 +41,18 @@
     line-height: 1.5rem;
     font-weight: 400;
     color: $white;
-    background-color: $link-color;
+    background-color: $main-theme-color;
     transition-duration: 0.2s;
     cursor: pointer;
 
     &:hover {
-      color: $link-color;
+      color: $main-theme-color;
       background-color: $white;
-      box-shadow: inset 0 0 0 0.2rem $link-color;
+      box-shadow: inset 0 0 0 0.2rem $main-theme-color;
     }
   }
 
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: $breakpoint-xs - 1px) {
     &__input {
       width: 100%;
     }

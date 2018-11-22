@@ -5,18 +5,22 @@
   background-size: auto, cover;
 
   &__menu {
-    padding-top: 60px;
+    padding: 45px 0;
+    display: flex;
+    justify-content: center;
   }
 
   &__href {
+    padding: 15px 35px;
     font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
     color: $text-color;
+    transition-duration: 0.1s;
     cursor: pointer;
 
     &--work {
-      margin: 0 90px 0 70px;
+      margin-right: 70px;
 
       &::before {
         position: relative;
@@ -27,7 +31,7 @@
     }
 
     &--shop {
-      margin: 0 70px 0 90px;
+      margin-left: 70px;
 
       &::after {
         position: relative;
@@ -36,5 +40,57 @@
         cursor: default;
       }
     }
+
+    &:hover {
+      color: $main-theme-color;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-sm - 1px) {
+    &__menu {
+      padding: 25px 0;
+      flex-wrap: wrap;
+    }
+
+    &__href {
+      margin: 0;
+      flex-basis: 50%;
+
+      &--about {
+        padding-right: 0;
+        padding-left: 47px;
+        order: 2;
+      }
+
+      &--work {
+        padding-right: 47px;
+        padding-left: 0;
+        order: 1;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &--shop {
+        padding-right: 47px;
+        padding-left: 0;
+        order: 3;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &--contact {
+        padding-right: 0;
+        padding-left: 47px;
+        order: 4;
+      }
+    }
+  }
+
+  @media screen and (max-height: 500px) {
+    background-size: auto 15%, cover;
   }
 }

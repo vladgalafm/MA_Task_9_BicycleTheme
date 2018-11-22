@@ -1,4 +1,6 @@
 .bi-details {
+  background-color: #999cab;
+
   &__part {
     display: flex;
   }
@@ -40,7 +42,7 @@
     position: relative;
     z-index: 2;
     height: $height-bi-details-part - $height-picture-under-text;
-    padding: 56px 10% 48px;
+    padding: $container-padding-top 10% $container-padding-bottom;
     background-color: $white;
     transition-duration: 1s;
 
@@ -53,21 +55,48 @@
       height: 1px;
       width: 10%;
       background-color: #d7d7d7;
+      opacity: 1;
+      transition: 1s ease-out;
     }
 
     &:hover {
+      padding-bottom: $container-padding-bottom-hover;
       height: $height-bi-details-part;
 
-      & .bi-details__text {
-        max-height: $height-bi-details-part - 104px;
+      .bi-details__text {
+        max-height: $height-bi-details-part - ($container-padding-top + $container-padding-bottom-hover);
+      }
+
+      &::after {
+        opacity: 0;
+      }
+
+      .bi-details__read-more {
+        transition-duration: 0.5s;
+        transition-delay: 1s;
+        opacity: 1;
+        visibility: visible;
+
+        &:hover {
+          transition-duration: 0.15s;
+          transition-delay: 0s;
+        }
+      }
+    }
+
+    &:not(:hover) {
+      .bi-details__read-more {
+        transition-duration: 0.2s;
+        opacity: 0;
       }
     }
   }
 
   &__text {
     padding-top: 60px;
-    max-height: $height-bi-details-part - $height-picture-under-text - 104px;
+    max-height: $height-bi-details-part - ($height-picture-under-text + $container-padding-top + $container-padding-bottom);
     overflow: hidden;
+    //text-overflow: ellipsis;
     background-position: 50% 0;
     background-repeat: no-repeat;
     transition-duration: 1s;
@@ -88,6 +117,7 @@
   &__header {
     padding-bottom: 1.125rem;
     font-size: 1.125rem;
+    line-height: 1.8rem;
     font-weight: 700;
     letter-spacing: 0.15rem;
     word-spacing: 0.2rem;
@@ -100,6 +130,20 @@
     word-spacing: 0.15rem;
     color: $text-color-lighter;
     text-align: justify;
+  }
+
+  &__read-more {
+    position: absolute;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, 0);
+    bottom: 2rem;
+    color: $text-color;
+    opacity: 0;
+    visibility: hidden;
+
+    &:hover {
+      color: $main-theme-color;
+    }
   }
 
   &__picture {
@@ -129,5 +173,70 @@
     flex-basis: 0;
     background: url("../img/BlockSection/Layer14.png") 50% 50% no-repeat;
     background-size: cover;
+  }
+
+  @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1px) {
+    &__company {
+      &--bicycle-company,
+      &--vintage {
+        flex-grow: 3;
+      }
+
+      &--bicycles {
+        flex-grow: 2;
+      }
+    }
+
+    &__description {
+      flex-grow: 2;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md - 1px) {
+    &__company {
+      &--bicycle-company,
+      &--vintage {
+        flex-grow: 1;
+      }
+    }
+
+    &__additional {
+      flex-grow: 0;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm - 1px) {
+    &__company {
+      &--bicycle-company,
+      &--vintage {
+        flex-grow: 1;
+      }
+
+      &--bicycles {
+        background-size: 80%, cover;
+      }
+    }
+
+    &__description {
+      flex-grow: 2;
+    }
+
+    &__additional {
+      flex-grow: 0;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-xs - 1px) {
+    &__company {
+      &--bicycle-company,
+      &--vintage,
+      &--bicycles {
+        flex-grow: 0;
+      }
+    }
+
+    &__additional {
+      flex-grow: 0;
+    }
   }
 }
