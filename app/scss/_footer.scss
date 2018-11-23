@@ -1,5 +1,5 @@
 .footer {
-  padding: 5.625rem 15%;
+  padding: 9vh 15%;
   background-color: $background-grey;
 
   &__container {
@@ -82,6 +82,9 @@
   }
 
   @media screen and (max-width: $breakpoint-xs - 1px) {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+
     &__contacts,
     &__social,
     &__creator {

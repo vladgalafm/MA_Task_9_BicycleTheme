@@ -1,5 +1,5 @@
 .about {
-  padding: 6rem 15% 6.5rem;
+  padding: 11vh 15% 12vh;
   background-color: $background-grey;
 
   &__container {
@@ -20,5 +20,14 @@
     line-height: 2rem;
     word-spacing: 0.15rem;
     color: $text-color-lighter;
+  }
+
+  @media screen and (max-width: $breakpoint-xs - 1px) {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+
+    &__content {
+      text-align: justify;
+    }
   }
 }

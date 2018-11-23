@@ -54,7 +54,7 @@
 
     &__href {
       margin: 0;
-      flex-basis: 50%;
+      width: 50%;
 
       &--about {
         padding-right: 0;
@@ -91,6 +91,7 @@
   }
 
   @media screen and (max-height: 500px) {
+    background-position: 50% 15px, 50% 50%;
     background-size: auto 15%, cover;
   }
 }

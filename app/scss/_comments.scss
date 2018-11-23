@@ -1,6 +1,6 @@
 .comments {
   position: relative;
-  padding: 6rem 15% 8rem;
+  padding: 11vh 15% 8rem;
   background-color: $background-grey;
   
   &__container {
@@ -145,5 +145,10 @@
     &:checked::after {
       background-color: $text-color-lighter;
     }
+  }
+
+  @media screen and (max-width: $breakpoint-xs - 1px) {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
   }
 }

@@ -70,8 +70,10 @@
     right: 0;
     bottom: 0;
     display: flex;
-    opacity: 0;
+    justify-content: center;
+    align-items: center;
     background-color: $button-hover-background;
+    opacity: 0;
     transition-duration: 0.2s;
     cursor: pointer;
 
@@ -81,7 +83,6 @@
   }
 
   &__link-style {
-    margin: auto;
     justify-content: center;
   }
 

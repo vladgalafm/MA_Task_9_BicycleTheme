@@ -1,5 +1,5 @@
 .email {
-  padding: 6rem 15%;
+  padding: 11vh 15%;
   background-color: $white;
 
   &__container {
@@ -53,6 +53,9 @@
   }
 
   @media screen and (max-width: $breakpoint-xs - 1px) {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+
     &__input {
       width: 100%;
     }

@@ -46,6 +46,17 @@
     background-color: $white;
     transition-duration: 1s;
 
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: $container-padding-bottom;
+      right: 10%;
+      height: 30px;
+      width: 80%;
+      background: linear-gradient(180deg, transparent, $white);
+      transition-duration: 1s;
+    }
+
     &::after {
       position: relative;
       content: "";
@@ -65,6 +76,10 @@
 
       .bi-details__text {
         max-height: $height-bi-details-part - ($container-padding-top + $container-padding-bottom-hover);
+      }
+
+      &::before {
+        bottom: $container-padding-bottom-hover;
       }
 
       &::after {
@@ -134,9 +149,9 @@
 
   &__read-more {
     position: absolute;
-    transform-origin: 50% 50%;
-    transform: translate(-50%, 0);
+    left: 50%;
     bottom: 2rem;
+    transform: translate(-50%, 0);
     color: $text-color;
     opacity: 0;
     visibility: hidden;
@@ -232,6 +247,16 @@
       &--vintage,
       &--bicycles {
         flex-grow: 0;
+      }
+    }
+
+    &__container {
+      padding-left: 7.5%;
+      padding-right: 7.5%;
+
+      &::before {
+        right: 7.5%;
+        width: 85%;
       }
     }
 

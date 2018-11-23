@@ -46,8 +46,13 @@
         width: 100%;
       }
     }
+  }
 
-    @media screen and (max-width: $breakpoint-xs - 1px) {
+  @media screen and (max-width: $breakpoint-xs - 1px) {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+
+    &__href {
       width: 100%;
     }
   }
