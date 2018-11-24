@@ -54,7 +54,7 @@
       right: 10%;
       height: 2rem;
       width: 80%;
-      background-image: linear-gradient(180deg, transparent, $white);
+      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), $white);
       transition-duration: 1s;
     }
 
