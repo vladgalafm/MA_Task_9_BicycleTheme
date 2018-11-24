@@ -2,6 +2,98 @@
   position: relative;
   padding: 11vh 15% 8rem;
   background-color: $background-grey;
+
+  &__button {
+    position: absolute;
+    left: -9999px;
+
+    &--first {
+      &:checked ~ .comments__container .comments__label {
+        &--first {
+          position: relative;
+          top: 0;
+        }
+
+        &--second {
+          position: absolute;
+          top: 100%;
+        }
+
+        &--third {
+          position: absolute;
+          top: 100%;
+        }
+      }
+    }
+
+    &--second {
+      &:checked ~ .comments__container .comments__label {
+        &--first {
+          position: absolute;
+          top: 100%;
+        }
+
+        &--second {
+          position: relative;
+          top: 0;
+        }
+
+        &--third {
+          position: absolute;
+          top: 100%;
+        }
+      }
+    }
+
+    &--third {
+      &:checked ~ .comments__container .comments__label {
+        &--first {
+          position: absolute;
+          top: 100%;
+        }
+
+        &--second {
+          position: absolute;
+          top: 100%;
+        }
+
+        &--third {
+          position: relative;
+          top: 0;
+        }
+      }
+    }
+
+    &:checked + .comments__switch {
+      background-color: $text-color-lighter;
+    }
+  }
+
+  &__switch {
+    position: absolute;
+    bottom: 4.5rem;
+    transform: translate(-50%, 0);
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid $text-color-lighter;
+    border-radius: 50%;
+    background-color: $background-grey;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &--button1 {
+      left: calc(50% - 25px);
+    }
+
+    &--button2 {
+      left: 50%;
+    }
+
+    &--button3 {
+      left: calc(50% + 25px);
+    }
+  }
   
   &__container {
     position: relative;
@@ -52,99 +144,6 @@
     font-weight: 400;
     font-style: italic;
     color: $text-color-lighter;
-  }
-
-  &__button {
-    position: absolute;
-    bottom: 4rem;
-    visibility: hidden;
-
-    &::after {
-      position: absolute;
-      content: "";
-      box-sizing: border-box;
-      width: 14px;
-      height: 14px;
-      border: 1px solid $text-color-lighter;
-      border-radius: 50%;
-      background-color: $background-grey;
-      transition: 0.2s;
-      cursor: pointer;
-      visibility: visible;
-    }
-
-    &--first {
-      &:checked ~ .comments__container .comments__label {
-        &--first {
-          position: relative;
-          top: 0;
-        }
-
-        &--second {
-          position: absolute;
-          top: 100%;
-        }
-
-        &--third {
-          position: absolute;
-          top: 100%;
-        }
-      }
-
-      &::after {
-        left: -27px;
-      }
-    }
-
-    &--second {
-      &:checked ~ .comments__container .comments__label {
-        &--first {
-          position: absolute;
-          top: 100%;
-        }
-
-        &--second {
-          position: relative;
-          top: 0;
-        }
-
-        &--third {
-          position: absolute;
-          top: 100%;
-        }
-      }
-
-      &::after {
-        left: -7px;
-      }
-    }
-
-    &--third {
-      &:checked ~ .comments__container .comments__label {
-        &--first {
-          position: absolute;
-          top: 100%;
-        }
-
-        &--second {
-          position: absolute;
-          top: 100%;
-        }
-
-        &--third {
-          position: relative;
-          top: 0;
-        }
-      }
-
-      &::after {
-        left: 13px;
-      }
-    }
-
-    &:checked::after {
-      background-color: $text-color-lighter;
-    }
   }
 
   @media screen and (max-width: $breakpoint-xs - 1px) {

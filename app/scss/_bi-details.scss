@@ -48,10 +48,11 @@
 
     &::before {
       position: absolute;
+      z-index: 1;
       content: "";
       bottom: $container-padding-bottom;
       right: 10%;
-      height: 30px;
+      height: 2rem;
       width: 80%;
       background: linear-gradient(180deg, transparent, $white);
       transition-duration: 1s;
@@ -87,8 +88,8 @@
       }
 
       .bi-details__read-more {
-        transition-duration: 0.5s;
-        transition-delay: 1s;
+        transition-duration: 0.45s;
+        transition-delay: 0.55s;
         opacity: 1;
         visibility: visible;
 
@@ -111,7 +112,6 @@
     padding-top: 60px;
     max-height: $height-bi-details-part - ($height-picture-under-text + $container-padding-top + $container-padding-bottom);
     overflow: hidden;
-    //text-overflow: ellipsis;
     background-position: 50% 0;
     background-repeat: no-repeat;
     transition-duration: 1s;
