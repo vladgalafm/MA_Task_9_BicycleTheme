@@ -3,6 +3,8 @@ $breakpoint-md: 992px;
 $breakpoint-sm: 768px;
 $breakpoint-xs: 576px;
 
+$padding-sides-mobile: 7.5%;
+
 $main-theme-color: #64c29e;
 
 $text-color: #4d4959;
@@ -16,8 +18,10 @@ $height-picture-under-text: 12.48439vw;
 $height-bi-details-part: 500px;
 $height-picture-under-text: 150px;
 $container-padding-top: 56px;
+$container-padding-sides: 10%;
 $container-padding-bottom: 48px;
 $container-padding-bottom-hover: 88px;
+$container-transition-duration: 1s;
 
 $height-catalog-box-lg: 100vw / 6;
 $height-catalog-box-md: 100vw / 4;

@@ -42,7 +42,7 @@
     }
 
     &--facebook {
-      margin: 0 1rem;
+      margin: 0 16px;
       background: $facebook-theme url(../img/social-facebook.png) no-repeat;
     }
 
@@ -63,7 +63,7 @@
   }
 
   &__yebo-icon {
-    margin-left: 0.5rem;
+    margin-left: 8px;
   }
 
   @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md - 1px) {
@@ -82,8 +82,7 @@
   }
 
   @media screen and (max-width: $breakpoint-xs - 1px) {
-    padding-left: 7.5%;
-    padding-right: 7.5%;
+    @include padding-sides-mobile;
 
     &__contacts,
     &__social,

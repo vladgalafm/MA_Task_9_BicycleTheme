@@ -35,27 +35,26 @@
     position: relative;
     flex-grow: 1;
     flex-basis: 0;
-    height: 500px;
   }
 
   &__container {
     position: relative;
     z-index: 2;
     height: $height-bi-details-part - $height-picture-under-text;
-    padding: $container-padding-top 10% $container-padding-bottom;
+    padding: $container-padding-top $container-padding-sides $container-padding-bottom;
     background-color: $white;
-    transition-duration: 1s;
+    transition-duration: $container-transition-duration;
 
     &::before {
       position: absolute;
       z-index: 1;
       content: "";
       bottom: $container-padding-bottom;
-      right: 10%;
+      right: $container-padding-sides;
       height: 2rem;
-      width: 80%;
+      width: 100% - 2 * $container-padding-sides;
       background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), $white);
-      transition-duration: 1s;
+      transition-duration: $container-transition-duration;
     }
 
     &::after {
@@ -68,7 +67,7 @@
       width: 10%;
       background-color: #d7d7d7;
       opacity: 1;
-      transition: 1s ease-out;
+      transition: $container-transition-duration ease-out;
     }
 
     &:hover {
@@ -88,7 +87,7 @@
       }
 
       .bi-details__read-more {
-        transition-duration: 0.45s;
+        transition-duration: $container-transition-duration - 0.55s;
         transition-delay: 0.55s;
         opacity: 1;
         visibility: visible;
@@ -114,7 +113,7 @@
     overflow: hidden;
     background-position: 50% 0;
     background-repeat: no-repeat;
-    transition-duration: 1s;
+    transition-duration: $container-transition-duration;
     
     &--frame {
       background-image: url("../img/BlockSection/Icon2.png");
@@ -251,12 +250,11 @@
     }
 
     &__container {
-      padding-left: 7.5%;
-      padding-right: 7.5%;
+      @include padding-sides-mobile;
 
       &::before {
-        right: 7.5%;
-        width: 85%;
+        right: $padding-sides-mobile;
+        width: 100% - 2 * $padding-sides-mobile;
       }
     }
 

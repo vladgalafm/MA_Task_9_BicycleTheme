@@ -23,8 +23,7 @@
   }
 
   @media screen and (max-width: $breakpoint-xs - 1px) {
-    padding-left: 7.5%;
-    padding-right: 7.5%;
+    @include padding-sides-mobile;
 
     &__content {
       text-align: justify;

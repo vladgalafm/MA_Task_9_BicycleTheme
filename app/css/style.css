@@ -220,7 +220,6 @@ $height-picture-under-text: 12.48439vw;
   -webkit-flex-basis: 0;
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
-  height: 500px;
 }
 
 .bi-details__container {
@@ -490,7 +489,7 @@ $height-picture-under-text: 12.48439vw;
 
 .comments {
   position: relative;
-  padding: 11vh 15% 8rem;
+  padding: 11vh 15% 170px;
   background-color: #f7f7f7;
 }
 
@@ -550,7 +549,7 @@ $height-picture-under-text: 12.48439vw;
 
 .comments__switch {
   position: absolute;
-  bottom: 4.5rem;
+  bottom: 72px;
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   -o-transform: translate(-50%, 0);
@@ -584,7 +583,7 @@ $height-picture-under-text: 12.48439vw;
 .comments__container {
   position: relative;
   display: block;
-  padding: 50px 0;
+  padding-top: 50px;
   background: url("../img/twitter-icon.png") 50% 0 no-repeat;
   overflow: hidden;
 }
@@ -783,10 +782,10 @@ $height-picture-under-text: 12.48439vw;
 }
 
 .shop__link-label {
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.1rem;
-  word-spacing: 0.15rem;
+  letter-spacing: 1.6px;
+  word-spacing: 2.4px;
   color: #ffffff;
 }
 
@@ -960,7 +959,7 @@ $height-picture-under-text: 12.48439vw;
 }
 
 .email__input {
-  padding: 1.25rem 1.25rem 1.125rem;
+  padding: 20px 20px 18px;
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-weight: 400;
@@ -990,7 +989,7 @@ $height-picture-under-text: 12.48439vw;
 }
 
 .email__button {
-  padding: 1.25rem 2rem;
+  padding: 20px 32px;
   font-size: 1.5rem;
   line-height: 1.5rem;
   font-weight: 400;
@@ -1005,8 +1004,8 @@ $height-picture-under-text: 12.48439vw;
 .email__button:hover {
   color: #64c29e;
   background-color: #ffffff;
-  -webkit-box-shadow: inset 0 0 0 0.2rem #64c29e;
-  box-shadow: inset 0 0 0 0.2rem #64c29e;
+  -webkit-box-shadow: inset 0 0 0 3px #64c29e;
+  box-shadow: inset 0 0 0 3px #64c29e;
 }
 
 @media screen and (max-width: 575px) {
@@ -1088,7 +1087,7 @@ $height-picture-under-text: 12.48439vw;
 }
 
 .footer__href--facebook {
-  margin: 0 1rem;
+  margin: 0 16px;
   background: #537bbd url(../img/social-facebook.png) no-repeat;
 }
 
@@ -1119,7 +1118,7 @@ $height-picture-under-text: 12.48439vw;
 }
 
 .footer__yebo-icon {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
