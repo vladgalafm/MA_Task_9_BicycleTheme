@@ -16,23 +16,28 @@
     font-weight: 700;
     letter-spacing: 0.15rem;
     word-spacing: 0.2rem;
-    color: $main-theme-color;
-    border: 1px solid $main-theme-color;
     transition-duration: 0.2s;
     cursor: pointer;
-
-    &:hover {
-      color: $button-hover;
-      border-color: $button-hover;
-    }
 
     &--visit,
     &--contact {
       width: 25%;
+      color: $main-theme-color;
+      border: 0.08rem solid $main-theme-color;
+
+      &:hover {
+        background-color: rgba(100, 194, 158, 0.2);
+      }
     }
 
     &--discover {
       width: 35%;
+      color: $white;
+      border: 0.08rem solid $white;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
     }
 
     @media screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-md - 1px) {

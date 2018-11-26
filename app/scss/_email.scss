@@ -3,7 +3,7 @@
   background-color: $white;
 
   &__container {
-    padding-top: 85px;
+    padding-top: 117px;
     background: url("../img/Logo.png") 50% 0 no-repeat;
   }
 
@@ -13,7 +13,7 @@
 
   &__label {
     display: block;
-    margin: 2rem 0;
+    margin-bottom: 2rem;
     font-weight: 400;
     font-style: italic;
     color: $text-color-lighter;

@@ -66,6 +66,14 @@
     margin-left: 8px;
   }
 
+  @media screen and (min-width: $breakpoint-md) {
+    &__contacts,
+    &__social,
+    &__creator {
+      width: calc(100% / 3);
+    }
+  }
+
   @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md - 1px) {
     &__social {
       width: 100%;

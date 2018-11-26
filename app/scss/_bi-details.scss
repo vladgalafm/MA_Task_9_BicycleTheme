@@ -86,23 +86,11 @@
         opacity: 0;
       }
 
-      .bi-details__read-more {
+      .bi-details__read-more-container {
         transition-duration: $container-transition-duration - 0.55s;
         transition-delay: 0.55s;
         opacity: 1;
         visibility: visible;
-
-        &:hover {
-          transition-duration: 0.15s;
-          transition-delay: 0s;
-        }
-      }
-    }
-
-    &:not(:hover) {
-      .bi-details__read-more {
-        transition-duration: 0.2s;
-        opacity: 0;
       }
     }
   }
@@ -146,14 +134,19 @@
     text-align: justify;
   }
 
-  &__read-more {
+  &__read-more-container {
     position: absolute;
     left: 50%;
     bottom: 2rem;
     transform: translate(-50%, 0);
-    color: $text-color;
     opacity: 0;
+    transition-duration: 0.2s;
     visibility: hidden;
+  }
+
+  &__read-more {
+    color: $text-color;
+    transition-duration: 0.2s;
 
     &:hover {
       color: $main-theme-color;

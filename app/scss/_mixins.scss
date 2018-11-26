@@ -2,3 +2,9 @@
   padding-left: $padding-sides-mobile;
   padding-right: $padding-sides-mobile;
 }
+
+@mixin comment-container-height($n-lines-header, $n-lines-comment) {
+  $height: 50px + $n-lines-header * 22px + 24px + $n-lines-comment * 24px + 24px;
+  height: $height;
+  clip: rect(50px, auto, $height, auto);
+}

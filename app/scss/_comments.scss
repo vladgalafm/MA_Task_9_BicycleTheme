@@ -1,6 +1,6 @@
 .comments {
   position: relative;
-  padding: 11vh 15% 170px;
+  padding: 11vh 15% 111px;
   background-color: $background-grey;
 
   &__button {
@@ -10,18 +10,15 @@
     &--first {
       &:checked ~ .comments__container .comments__label {
         &--first {
-          position: relative;
-          top: 0;
+          left: 0;
         }
 
         &--second {
-          position: absolute;
-          top: 100%;
+          left: 100%;
         }
 
         &--third {
-          position: absolute;
-          top: 100%;
+          left: 200%;
         }
       }
     }
@@ -29,18 +26,15 @@
     &--second {
       &:checked ~ .comments__container .comments__label {
         &--first {
-          position: absolute;
-          top: 100%;
+          left: -100%;
         }
 
         &--second {
-          position: relative;
-          top: 0;
+          left: 0;
         }
 
         &--third {
-          position: absolute;
-          top: 100%;
+          left: 100%;
         }
       }
     }
@@ -48,18 +42,15 @@
     &--third {
       &:checked ~ .comments__container .comments__label {
         &--first {
-          position: absolute;
-          top: 100%;
+          left: -200%;
         }
 
         &--second {
-          position: absolute;
-          top: 100%;
+          left: -100%;
         }
 
         &--third {
-          position: relative;
-          top: 0;
+          left: 0;
         }
       }
     }
@@ -101,46 +92,79 @@
     padding-top: 50px;
     background: url("../img/twitter-icon.png") 50% 0 no-repeat;
     overflow: hidden;
+
+    @media screen and (min-width: 1600px) {
+      @include comment-container-height(1, 2);
+    }
+
+    @media screen and (min-width: 1200px) and (max-width: 1599px) {
+      @include comment-container-height(1, 3);
+    }
+
+    @media screen and (min-width: 850px) and (max-width: 1199px) {
+      @include comment-container-height(1, 4);
+    }
+
+    @media screen and (min-width: 675px) and (max-width: 849px) {
+      @include comment-container-height(1, 5);
+    }
+
+    @media screen and (min-width: 470px) and (max-width: 674px) {
+      @include comment-container-height(1, 6);
+    }
+
+    @media screen and (min-width: 405px) and (max-width: 469px) {
+      @include comment-container-height(2, 7);
+    }
+
+    @media screen and (min-width: 350px) and (max-width: 404px) {
+      @include comment-container-height(2, 8);
+    }
+
+    @media screen and (max-width: 349px) {
+      @include comment-container-height(2, 9);
+    }
   }
 
   &__label {
+    position: absolute;
+    top: 50px;
     display: block;
+    width: 100%;
     background-color: $background-grey;
+    transition-duration: 1s;
 
     &--first {
-      position: relative;
-      top: 0;
+      left: 0;
     }
 
     &--second {
-      position: absolute;
-      top: 100%;
+      left: 100%;
     }
 
     &--third {
-      position: absolute;
-      top: 100%;
+      left: 200%;
     }
   }
 
   &__user {
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 700;
-    letter-spacing: 0.1rem;
+    letter-spacing: 1.6px;
   }
 
   &__time {
-    margin-left: 0.5rem;
-    font-size: 1.125rem;
+    margin-left: 8px;
+    font-size: 18px;
     font-weight: 300;
-    letter-spacing: 0.1rem;
+    letter-spacing: 1.6px;
     color: $text-color-lighter;
   }
 
   &__text {
     display: block;
-    margin-top: 1.5rem;
-    font-size: 1.25rem;
+    margin-top: 24px;
+    font-size: 20px;
     font-weight: 400;
     font-style: italic;
     color: $text-color-lighter;
